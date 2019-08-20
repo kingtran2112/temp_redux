@@ -10,7 +10,7 @@ import { REFRESH } from './ActionTypes.js'
 
 const store = createStore(refresh)
 let i = 0
-setInterval(() => store.dispatch({type: REFRESH, data: 'a'}), 1000)
+setInterval(() => store.dispatch({type: REFRESH, data: new Date().toLocaleDateString}), 1000)
 
 ReactDOM.render(<Provider store = {store}>
 	<App/>
